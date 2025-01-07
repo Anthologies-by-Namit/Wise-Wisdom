@@ -1,0 +1,421 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Alkes;
+    font-weight: bolder;
+    line-height: 1.6;
+    color: #2c3e50;
+    background: linear-gradient(270deg, #a8e0e0, #f0f4f4, #d1e8e8, #b0e0e0);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    overflow-x: hidden;
+    font-weight: 400;
+}
+
+/* Keyframe Animation for Background Gradient */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Container Styling */
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background: #ffffff;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    animation: fadeIn 1.5s ease-in-out;
+    text-align: center;
+}
+/* Headings Styling */
+h1, h2 {
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    animation: slideInDown 1s ease-out;
+    transition: transform 0.5s ease-out;
+
+}
+
+h1:hover{
+    transform: scale(1.1);
+    color: #f39c12;
+}
+
+h2 {
+    font-size: 2.3rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+    color: #3498db;
+    animation: zoomIn 1s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    transition: transform 0.3s ease-out, color 0.3s ease-in-out;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #f39c12; /* Changed to a more appealing color */
+    bottom: -8px;
+    left: 0;
+    border-radius: 2px;
+    animation: growLine 1.5s ease-in-out;
+}
+
+h2:hover {
+    color: #f39c12;
+    transform: scale(1.1);
+}
+
+
+/* Paragraphs */
+p {
+    font-size: 1.25rem;
+    margin-bottom: 1.8rem;
+    line-height: 1.75;
+    color: #34495e;
+    font-style: italic;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+p:hover {
+    transform: translateX(10px);
+    background-image: linear-gradient(45deg, #3498db, #9b59b6, #f39c12, #e74c3c);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+/* List Styling */
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+ul li {
+    margin: 1rem 0;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+ul li:hover {
+    transform: translateX(10px);
+}
+
+ul li::before {
+    content: '•';
+    color: #3498db;
+    font-size: 1.5rem;
+    position: absolute;
+    left: -25px;
+    top: 0;
+}
+
+/* Button Link */
+a.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(45deg, #3498db, #8e44ad);
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    margin-top: 2rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s ease-in-out;
+}
+
+a.btn:hover {
+    background: linear-gradient(45deg, #8e44ad, #3498db);
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Navigation */
+nav {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    animation: slideInLeft 1.2s ease-in-out;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+    transform: scale(1.1);
+}
+
+/* Poem Section Styling */
+.poem-section {
+    padding: 3rem;
+    background: rgba(236, 240, 241, 0.9);
+    margin: 2rem auto;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.poem-section h1 {
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 3rem;
+    text-decoration: underline;
+    font-size: 2.8rem;
+    animation: bounceInDown 1s ease-out;
+    animation: grwoline 1s, ease-in-out;
+    transition: transform 0.3s ease-out, color 0.3s ease-in-out;
+}
+
+.poem-section h1:hover {
+    transform: translateY(-10px);
+}
+
+.poem-section p {
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: #34495e;
+    transition: transform 0.3s ease-in-out;
+}
+
+.poem-section p:hover {
+    transform: translateX(10px);
+}
+
+.poem-section hr {
+    border: 1px solid #f39c12; /* Updated line color for better appeal */
+    margin: 2rem 0;
+}
+
+/* Custom Grow Line Colors */
+.poem-section h2::after {
+    background: linear-gradient(45deg, #f39c12, #e74c3c); /* Gradient effect for appeal */
+}
+
+/* Poem Section Styling */
+.poem-section {
+    padding: 3rem;
+    background: #ecf0f1;
+    margin: 2rem auto;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.poem-section h1 {
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 3rem;
+    text-decoration: underline;
+    font-size: 2.8rem;
+    animation: bounceInDown 1s ease-out;
+}
+
+.poem-section p {
+    font-weight: 550;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: #34495e;
+    transition: transform 0.3s ease-in-out;
+}
+
+.poem-section p:hover {
+    transform: translateX(10px);
+    background-image: linear-gradient(45deg, #3498db, #9b59b6, #f39c12, #e74c3c); /* Four-color gradient */
+    color: transparent;  /* Make text transparent to show the gradient */
+    background-clip: text;  /* Clip the background to the text */
+    -webkit-background-clip: text; /* For Safari */
+}
+
+.poem-section hr {
+    border: 1px solid #3498db;
+    margin: 2rem 0;
+}
+
+
+/* Footer Section */
+/* Navigation */
+nav {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    animation: slideInLeft 1.2s ease-in-out;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+    transform: scale(1.1);
+}
+
+hr {
+    margin: 3rem 0;
+    border: 1px solid #ddd;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes growLine {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes bounceInDown {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(10%);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    a.btn {
+        padding: 0.8rem 1.6rem;
+    }
+}
+
