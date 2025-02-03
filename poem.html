@@ -6,13 +6,14 @@
     <title>Wise Wisdom</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="poem-page">
     <header>
         <nav>
             <ul>
                 <li><a href="index.html">Click here to go back to the Home</a></li>
             </ul>
         </nav>
+        
     <section class="poem-section" style="font-weight: bolder;">
         <h1>Wise Wisdom</h1>
         <p id="p1">
@@ -80,6 +81,54 @@
         <hr>
         <p id="p11">~Namit Agarwal</p>
     </section>
+    <!-- Cosmic Elements -->
+    <div class="starfield"></div>
+    <div class="candle-container">
+        <div class="candle">
+            <div class="candle-body"></div>
+            <div class="flame"></div>
+        </div>
+        <div class="candle-light"></div>
     </div>
+
+    <!-- JavaScript at the end of body -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Create starfield
+        const starfield = document.querySelector('.starfield');
+        for(let i = 0; i < 1200; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.width = Math.random() * 3 + 'px';
+            star.style.height = star.style.width;
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 2 + 's';
+            starfield.appendChild(star);
+        }
+
+        // Candle light follow
+        const candleLight = document.querySelector('.candle-light');
+        const poemSection = document.querySelector('.poem-section');
+        
+        document.addEventListener('mousemove', (e) => {
+            const rect = poemSection.getBoundingClientRect();
+            const x = e.clientX - rect.left - 150;
+            const y = e.clientY - rect.top - 150;
+            
+            candleLight.style.transform = `translate(
+                ${Math.min(rect.width - 150, Math.max(-150, x))}px,
+                ${Math.min(rect.height - 150, Math.max(-150, y))}px
+            )`;
+        });
+    });
+    </script>
+<!-- Add this to your poem.html before </body> -->
+<div class="candle-container">
+    <div class="candle">
+        <div class="candle-body"></div>
+        <div class="flame"></div>
+    </div>
+</div>
 </body>
 </html>
