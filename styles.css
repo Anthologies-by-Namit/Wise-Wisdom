@@ -473,7 +473,7 @@ body.poem-page {
 /* Text Effects */
 .poem-section p {
     filter: blur(1px);
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     position: relative;
     z-index: 2;
     background: transparent;
